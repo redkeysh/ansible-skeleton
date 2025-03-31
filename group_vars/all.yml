@@ -1,0 +1,26 @@
+# group_vars/all.yaml
+# Global variables for all hosts
+---
+
+# Baseline logging level. Can be overridden.
+logging_level: INFO
+
+# Automatically update host-wide packages
+update_packages: true
+
+# Host-specific common configuration parameters
+timezone: "UTC"
+ntp_servers:
+  - 0.pool.ntp.org
+  - 1.pool.ntp.org
+
+# Global configuration for the FIPS and STIG compliance role
+fips:
+  enabled: true
+  marker_file: "/etc/system-fips"
+
+stig:
+  enforce: true
+  sysctl_settings:
+    - { name: "net.ipv4.conf.all.accept_redirects", value: "0" }
+    - { name: "net.ipv4.conf.all.send_redirects", value: "0" }

@@ -1,0 +1,26 @@
+all:
+  children:
+    development:
+      hosts:
+        dev-server1:
+          ansible_host: 192.168.1.103
+          ansible_user: ansible
+        dev-server2:
+          ansible_host: 192.168.1.104
+          ansible_user: ansible
+    staging:
+      hosts:
+        staging-server1:
+          ansible_host: 192.168.1.102
+          ansible_user: ansible
+    production:
+      hosts:
+        prod-web-server:
+          ansible_host: 192.168.1.101
+          ansible_user: ansible
+        prod-db-server:
+          ansible_host: 192.168.1.105
+          ansible_user: ansible
+        prod-app-server:
+          ansible_host: 192.168.1.106
+          ansible_user: ansible

@@ -1,0 +1,26 @@
+# Ansible transient files
+*.retry
+*.log
+
+# Ansible vault/password files
+*.vault_pass
+
+# Python cache and compiled files
+*.py[cod]
+__pycache__/
+*.so
+
+# Virtual environments
+env/
+venv/
+.venv/
+
+# IDE or editor specific files
+.vscode/
+.idea/
+*.swp
+*~
+
+# OS generated files
+.DS_Store
+Thumbs.db

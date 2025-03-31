@@ -1,0 +1,17 @@
+# group_vars/production.yaml
+# Production environment settings
+---
+
+# Production logging level.
+logging_level: WARNING
+
+# Enforce package updates for regular security updates in production
+update_packages: true
+
+# Production NTP servers
+ntp_servers:
+  - prod.ntp1.example.com
+  - prod.ntp2.example.com
+
+# Environment-specific variables
+environment: "production"

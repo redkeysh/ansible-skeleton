@@ -1,0 +1,16 @@
+# group_vars/development.yaml
+# Development environment settings
+---
+
+# Lower logging level for troubleshooting in a development environment.
+logging_level: DEBUG
+
+# Default to not updating packages automatically in a development environment.
+update_packages: false
+
+# Sample global variable override: local NTP servers for testing
+ntp_servers:
+  - dev.ntp.example.com
+
+# Environment-specific variables
+environment: "development"

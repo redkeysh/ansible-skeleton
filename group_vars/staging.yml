@@ -1,0 +1,16 @@
+# group_vars/staging.yaml
+# Staging environment settings
+---
+
+# Standard logging level for staging
+logging_level: INFO
+
+# Enable package updates to mimic production, typically with staging repositories
+update_packages: true
+
+# Staging-specific NTP server. Example of a global variable being overridden from "all.yml"
+ntp_servers:
+  - staging.ntp.example.com
+
+# Environment-specific variables
+environment: "staging"

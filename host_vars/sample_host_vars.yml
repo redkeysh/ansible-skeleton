@@ -1,0 +1,26 @@
+# Override global logging level, we want DEBUG on this new host for more verbose logging.
+logging_level: DEBUG
+
+# Specific package update behavior on this host
+update_packages: false
+
+# Timezone configuration
+timezone: "America/Los_Angeles"
+
+# Unique network configuration for this host
+network_interfaces:
+  - name: eth0
+    ip: 192.168.1.101
+    netmask: 255.255.255.0
+    gateway: 192.168.1.1
+
+# Custom role variable overrides
+fips:
+  enabled: true
+  marker_file: "/etc/system-fips"
+
+stig:
+  enforce: true
+  sysctl_settings:
+    - { name: "net.ipv4.conf.all.accept_redirects", value: "0" }
+    - { name: "net.ipv4.conf.all.send_redirects", value: "0" }
